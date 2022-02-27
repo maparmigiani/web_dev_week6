@@ -1,0 +1,45 @@
+<!--
+*Name: Maiara Almeida
+*Student id: 301145511
+--> 
+
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+<!--Contact information display --> 
+
+<h1>*****************************************</h1>
+<h5>Name: Maiara Karla Parmigiani de Almeida</h5>
+<h5>Phone: +1 (437) 970-8474</h3>
+<h5>E-mail: maiaraalmeida92@gmail.com</h5>
+<h5>Location: Toronto (Canada)</h5>
+<h1>*****************************************</h1>
+
+<!--Form t contact me display --> 
+<h1>Please feel free to contact me!</h1>
+<p>Click on the reset button to reset the information.</p>
+<form action="/action_page.php">
+    <label for="firstName">Enter your First Name:      </label>
+    <input type="text" id="firstName" name="firstName"><br><br>
+
+    <label for="lastName">Enter your Last Name:        </label>
+    <input type="text" id="lastName" name="lastName"><br><br>
+
+    <label for="contactNumber">Enter your Phone Number:</label>
+    <input type="text" id="contactNumber" name="contactNumber"><br><br>
+
+    <label for="email">Enter your email:               </label>
+    <input type="email" id="email" name="email"><br><br>
+  
+    <label for="message">Enter your message:           </label>
+    <input type="text" id="message" name="message" maxlength="500"><br><br>  
+  
+    <input class="btn btn-primary" type="reset" value="Reset">
+    <!--<input href="/home" type="button" value="Submit" aria-pressed="true">-->
+    <a href="/home" class="btn btn-primary" type="button" value="Submit" role="button" aria-pressed="true">Submit</a>
+    
+</form>
+
+
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>

@@ -1,0 +1,42 @@
+<!--
+*Name: Maiara Almeida
+*Student id: 301145511
+--> 
+
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+
+
+<!--Card with image, general information and link to about --> 
+<div class="row">
+    <div class="col-sm-3">
+        <img class="card-img-top" src="/Assets/images/maiara.png"  width="200" height="300" alt="">
+        <div class="card-body">
+            <h5 class="card-title">Personal Information</h5>
+            <p class="card-text">Maiara Karla Parmigiani de Almeida, Brazilian citizen, current living at Canada.</p>
+            <a href="/contact" class="btn btn-primary">Contact me!</a>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <img class="card-img-top" src="/Assets/images/Brazil.png"  width="200" height="300" alt="">
+        <div class="card-body">
+            <h5 class="card-title">General Information</h5>
+            <p class="card-text">I am a brazilian mechanical engineer, I also have an MBA in Project Management and I am studying Software Engineering at Centennial College.</p>
+            <a href="/services" class="btn btn-primary">Check the services available!</a>
+        </div>
+    </div>
+    <div class="col-sm-3">
+  <!--Card with backgroung information and link to resume --> 
+        <img class="card-img-top" src="/Assets/images/gmg.jpg"  width="200" height="300" alt="">
+        <div class="card-body">
+            <h5 class="card-title">Backgroung</h5>
+            <p class="card-text">I worked 6 years at General Motors do Brasil at Aftersales Engineering team, form this 6 year, 4 of them were at regulatory team and the last two split at Remanufacturing part and Post Production Vehicles.</p>
+            <a href="/Assets/documents/cv.pdf" class="btn btn-primary">Resume Link</a>
+        </div>
+    </div>
+</div>
+
+
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>

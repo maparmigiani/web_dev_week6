@@ -1,0 +1,52 @@
+<!--
+*Name: Maiara Almeida
+*Student id: 301145511
+--> 
+
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+
+<main class = "container">
+  <div class = "row">
+
+    <% if(typeof displayName == 'string' && displayName) { %>
+    <a href = "/information-list/add" class="btn btn-outline-warning btn-lg" role="button">
+      <i class="fa fa-plus-circle"></i> Add a Bussiness Information </a>
+      <% } %>  
+      <br>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Contact Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Email Adress</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+        <%for(let count = 0; count < InformationList.length; count ++) { %>
+          <tr>
+            
+            <td><%=InformationList[count].name %></td>
+            <td><%=InformationList[count].number %></td>
+            <td><%=InformationList[count].email %></td>
+            <td>
+              <a href = "/information-list/edit/<%=InformationList[count]._id %>" class="btn btn-primary btn-sm">
+              <i class="fas fa-pencil-alt"></i> Edit </a>
+            </td> 
+            <td>
+              <a href = "/information-list/delete/<%=InformationList[count]._id %>" class="btn btn-danger btn-sm">
+              <i class="fas fa-trash-alt"></i> Delete </a>
+            </td> 
+          </tr>
+        <% } %>
+        </tbody>
+    </table>
+  </div>
+</main>
+
+
+    <%- include ../partials/bottom_nav.ejs %>
+    <%- include ../partials/footer.ejs %>
