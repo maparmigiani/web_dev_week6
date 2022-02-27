@@ -15,13 +15,13 @@ module.exports.displayInformationList = (req, res, next) => {
             return console.error(err);
         }else{
             //console.log(informationList);
-            res.render('information/list',{title: 'Business Contacts List View',InformationList : informationList});
+            res.render('information/list',{title: 'Business Contacts List View',InformationList : informationList, displayName: req.user ? req.user.displayName : "" });
         }
     });
   }
 
 module.exports.displayAddPage =  (req, res, next) => {
-    res.render('information/add',{title: 'Add Information'})
+    res.render('information/add',{title: 'Add Information',displayName: req.user ? req.user.displayName : "" })
   }
 
 module.exports.processAddPage = (req, res, next) => {
@@ -49,7 +49,7 @@ module.exports.displayEditPage =  (req, res, next) => {
             console.log(err);
             res.end(err);
          }else{
-            res.render('information/edit',{title: 'Edit Information', information:informationToEdit})
+            res.render('information/edit',{title: 'Edit Information', information:informationToEdit,displayName: req.user ? req.user.displayName : "" })
             }
         
         });

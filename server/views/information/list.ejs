@@ -17,17 +17,27 @@
       <br>
     <table class="table table-striped">
         <thead>
-          <tr>
+          <tr >
+            <% if(typeof displayName == 'string' && displayName) { %>
             <th scope="col">Contact Name</th>
             <th scope="col">Phone Number</th>
             <th scope="col">Email Adress</th>
             <th scope="col">Update</th>
             <th scope="col">Delete</th>
+            <% } else { %>
+              <th scope="col">Contact Name</th>
+              <th scope="col">Phone Number</th>
+              <th scope="col">Email Adress</th>
+          <% } %>
           </tr>
         </thead>
+
+
         <tbody>
+          <!-- Repeatable Template Row -->
         <%for(let count = 0; count < InformationList.length; count ++) { %>
-          <tr>
+          <tr >
+            <% if(typeof displayName == 'string' && displayName) { %>
             
             <td><%=InformationList[count].name %></td>
             <td><%=InformationList[count].number %></td>
@@ -40,8 +50,14 @@
               <a href = "/information-list/delete/<%=InformationList[count]._id %>" class="btn btn-danger btn-sm">
               <i class="fas fa-trash-alt"></i> Delete </a>
             </td> 
+         
+            <% } else { %>
+              <td><%=InformationList[count].name %></td>
+              <td><%=InformationList[count].number %></td>
+              <td><%=InformationList[count].email %></td>
+            <% } %>
           </tr>
-        <% } %>
+          <% } %>
         </tbody>
     </table>
   </div>
